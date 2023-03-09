@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter radius : <input type="number" id="rad">
+    </div>
+    <button type="button" onclick="t()">click</button>
+    <h1 id="demo"></h1>
+
+    <script>
+        function t(){
+            const r = rad.value;
+            const x = function(r){return 3.14 * r*r};
+           document.getElementById('demo').innerHTML="the area of circle is "+x(r);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1>this is js</h1>
+        <select class="form-select mb-3" aria-label="Default select example" onchange="t()" id="select">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select><select class="form-select mb-3" aria-label="Default select example" id="first">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Three</option>
+          </select>
+
+          <button class="btn btn-primary " onclick="but()">click</button>
+
+          <table class="table" id="tab">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+    </div>
+
+
+    <script>
+        function t(){
+            var x = document.getElementById('select').value;
+            var y = document.getElementById('first').options[1].value;
+            var z = document.getElementById("first").options[2].value;
+            if (x===y){
+                document.getElementById('first').options[1].text="man"
+                document.getElementById('first').options[2].text="xyz"
+                document.getElementById('first').options[3].text="123"
+                document.getElementById('first').options[4].text="wrte"
+            }
+            if(x===z){
+                document.getElementById('first').options[1].text="abcd"
+                document.getElementById('first').options[2].text="abcd2"
+                document.getElementById('first').options[3].text="abcd3"    
+                document.getElementById('first').options[4].style.display="none"
+            }
+console.log(x)
+
+    
+            
+
+        }
+     
+        function but(){
+            var x = document.getElementById('select').value;
+            var y = document.getElementById('first')
+            var z = document.getElementById("first").value;
+
+            var t= document.getElementById('tab');
+            var rows = tab.insertRow(-1);
+            var z1 = rows.insertCell(0)
+            var z2 = rows.insertCell(1)
+            z1.innerHTML=document.getElementById('first').options[y.selectedIndex].text;
+        }
+    </script>
+</body>
+</html>

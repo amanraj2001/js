@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is Practice 3 of js mod2</h1>
+    <h3 id="demo"></h3>
+
+
+
+    <script>
+        var x = prompt("Enter String:");
+         var y = typeof (x);
+        function pro(ans) {
+            document.getElementById('demo').innerHTML = ans + " " + joinz
+        }
+        var mypro = new Promise(function (myResolve, myReject) {
+            setTimeout(function () {
+
+
+                if (typeof (x) === "string" || y instanceof String) {
+                    myResolve("Its A string");
+                }
+                else {
+                    myReject("Its not a string");
+                }
+
+            }, 500);
+        })
+
+        mypro.then(
+            function (value) { pro(value); },
+            function (error) { pro(error); }
+        )
+
+
+        var z = x.split("");
+        var rev = z.reverse();
+        var joinz = rev.join(""); 
+    </script>
+</body>
+
+</html>

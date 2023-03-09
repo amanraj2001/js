@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter length : <input type="number" id="len">
+        Enter breadth : <input type="number" id="bre">
+    </div>
+    <button type="button" onclick="t()">click</button>
+    <h1 id="demo"></h1>
+
+
+    <script>
+        function t(){
+            const l = len.value;
+            const b = bre.value;
+            const x = new Function("l","b", "return l*b");
+            const y = x(l,b);
+            document.getElementById('demo').innerHTML="Area of Rectangle is "+ y
+        }
+    </script>
+</body>
+</html>

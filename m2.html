@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is javascript prac_2</h1>
+
+    <h3>var is global variable , it can be accessed anywhere.</h3>
+    <p id="var"></p>
+    <p id="let"></p>
+
+
+
+
+    <script>
+
+         var x = {name:"aman", age:"22"}
+         console.log(typeof(x));
+         function varia(){
+             document.getElementById('var').innerHTML="Using var <strong>x</strong> can be accessed anywhere like here inside the function == "   +x.name +" "+ x.age
+         }
+         varia()
+
+
+         function lett(){
+            let y= "hello world"
+            alert(y);
+            
+         }
+         lett();
+         document.getElementById('let').innerHTML="let can only be accessed inside the brackets outside them theres no existence of let "+"y"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello this is js</h1>
+    <button onclick="great()">calculate greatest number</button>
+    <h2 id="larg"></h2>
+    <script>
+        var n1 = Number(prompt("Please enter number 1"));
+        var n2 = parseInt(prompt("please enter number 2"));
+        var n3 = parseInt(prompt("please enter number 3"));
+
+
+
+        function great() {
+            if (n1 > n2 && n1 > n3) {
+                document.getElementById('larg').innerHTML="largest number is "+ n1;
+            }
+            else if (n2 > n1 && n2 > n3) {
+                document.getElementById('larg').innerHTML="largest number is "+ n2;
+            }
+            else {
+                document.getElementById('larg').innerHTML="largest number is "+ n3;
+            }
+        }
+
+      
+
+      
+
+
+        // for adding the numbers greater than 40
+        var sum = 0;
+        if (n1 > 40) {
+            sum = sum + Number(n1);
+
+        }
+        if (n2 > 40) {
+            sum = sum + Number(n2);
+        }
+        if (n3 > 40) {
+            sum = sum + Number(n3);
+        }
+        alert("sum is " + sum);
+
+    </script>
+</body>
+
+</html>

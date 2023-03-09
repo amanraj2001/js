@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 10px 0;
+        }
+
+        tr,
+        td {
+            border-radius: 2px;
+            border: 2px solid red;
+            box-sizing: border-box;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <div>
+        <label for="name">Enter name</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="name2">Enter number</label>
+        <input type="number" id="name2">
+    </div>
+    <div>
+        <button onclick="abc()">click</button>
+    </div>
+    <table id="display" style="width: 100%; border: 2px solid black;">
+
+    </table>
+
+    <script>
+        arr = [];
+        function abc() {
+            n1 = document.getElementById('name').value;
+            n2 = document.getElementById('name2').value;
+            console.log(n1)
+
+            arr.push({ "n11": n1, "n22": n2 })
+            console.log(arr[0].n11)
+
+            data = "<tr><td>Name</td><td>number</td></tr>"
+            for (var i = 0; i < arr.length; i++) {
+                data += "<tr><td>" + arr[i].n11 + "</td><td>" + arr[i].n22 + "</td></tr>";
+            }
+            document.getElementById('display').innerHTML = data
+        }
+
+    </script>
+</body>
+
+</html>
